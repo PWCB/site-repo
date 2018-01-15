@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- #BeginTemplate "master.dwt" -->
+
+<script src="scripts.js"></script>
+
+<head runat="server">
+<title>PWCB</title>
+<meta content="en-us" http-equiv="Content-Language" >
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
+
+
+
+<link href="style1.css" media="screen" rel="stylesheet" title="CSS" type="text/css" >
+
+<!-- gallery -->
+<link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+<link href='gallery/simplelightbox.min.css' rel='stylesheet' type='text/css'>
+<link href='gallery/gallery.css' rel='stylesheet' type='text/css'>
+
+
+<style type="text/css">
+</style>
+</head>
+
+<body class="bodyx" onload="randombg()" id="random" style="width: 100%">
+
+<!-- Begin Container -->
+
+<table cellpadding="75%" style="width: 100%" class="transparenttable" >
+	<tr class="maintable">
+		<td>
+			<table align="center" class="headertable" style="width: 75%" cellpadding="10%" cellspacing="10%">
+				<tr>
+					<td style="width: 475px; height: 475px;" class="logo">
+					<a href="index.html">
+					<img alt="Home" class="logo" height="475px" src="pwcbixlrgt.png" width="475px" ></a></td>
+					<td class="headerlinks"><strong> <a href="games.html">GAMES</a>
+					<a href="music.html">MUSIC</a>
+					<a href="artwork.html">ARTWORK</a> <a href="photos.html">
+					PHOTOS</a>
+					<a href="misc.html">MISC</a> <br>
+					<a href="https://twitter.com/pwcbrock">
+					<img alt="Twitter" height="32" src="twitter.png" width="32" class="logo"></a>
+					<a href="https://pwcb.itch.io/">
+					<img alt="Itch" height="32" src="itchio.png" width="32" class="logo"></a></strong></td>
+				</tr>
+			</table>
+			
+			<hr class="line" />
+			
+			<table align="center" style="width: 75%">
+			<!-- #BeginEditable "content" -->
+				<tr>
+					<td class="maintext" style="text-align: center">
+					<iframe width="960" height="480" src="https://www.youtube.com/embed/SIo1X0cp6RE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</td>
+				</tr>
+			<!-- #EndEditable -->
+			</table>
+			
+			<hr class="line" />
+			
+			</td>
+	</tr>
+</table>
+<table style="width: 100%">
+	<tr>
+		<td class="footer" style="height: 16px">&nbsp;<a href="about.html">About</a> • 
+		© 2018 PWCB</td>
+	</tr>
+</table>
+
+<!-- gallery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="gallery/simple-lightbox.js"></script>
+<script>
+	$(function(){
+		var $gallery = $('.gallery a').simpleLightbox();
+
+		$gallery.on('show.simplelightbox', function(){
+			console.log('Requested for showing');
+		})
+		.on('shown.simplelightbox', function(){
+			console.log('Shown');
+		})
+		.on('close.simplelightbox', function(){
+			console.log('Requested for closing');
+		})
+		.on('closed.simplelightbox', function(){
+			console.log('Closed');
+		})
+		.on('change.simplelightbox', function(){
+			console.log('Requested for change');
+		})
+		.on('next.simplelightbox', function(){
+			console.log('Requested for next');
+		})
+		.on('prev.simplelightbox', function(){
+			console.log('Requested for prev');
+		})
+		.on('nextImageLoaded.simplelightbox', function(){
+			console.log('Next image loaded');
+		})
+		.on('prevImageLoaded.simplelightbox', function(){
+			console.log('Prev image loaded');
+		})
+		.on('changed.simplelightbox', function(){
+			console.log('Image changed');
+		})
+		.on('nextDone.simplelightbox', function(){
+			console.log('Image changed to next');
+		})
+		.on('prevDone.simplelightbox', function(){
+			console.log('Image changed to prev');
+		})
+		.on('error.simplelightbox', function(e){
+			console.log('No image found, go to the next/prev');
+			console.log(e);
+		});
+	});
+</script>
+
+<div id="preload">
+   <img src="bg0.png" width="1" height="1" alt="bg0">
+   <img src="bg1.png" width="1" height="1" alt="bg1">
+   <img src="bg2.png" width="1" height="1" alt="bg2">
+   <img src="bg3.png" width="1" height="1" alt="bg3">
+</div>
+
+<!-- End Container -->
+</body>
+
+<!-- #EndTemplate -->
+
+</html>

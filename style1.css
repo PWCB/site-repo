@@ -1,0 +1,78 @@
+﻿div#preload { display: none; }
+
+#random{
+	background-position: center center;
+	background-size: cover;
+	background-color: #151515;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.bodyx {
+	background-position: center center;
+	background-size: cover;
+	font-family: Arial;
+	font-size: small;
+	font-weight: normal;
+	color: #FFFFFF;
+	background-color: #000000;
+	background-image: url('rocks02.png');
+	width: 100%;
+	position: static;
+	height: 100%;
+}
+
+.maintable {
+}
+
+.headertable {
+	border-style: solid;
+	border-color: #FFFFFF;
+	opacity: 0.8;
+}
+.logo {
+	border-width: 1px;
+}
+.headerlinks {
+	text-align: center;
+	font-size: 48px;
+	font-family: Arial;
+	font-weight: bolder;
+}
+.maintext {
+	text-align: left;
+	font-size: large;
+	font-family: Arial;
+	font-weight: normal;
+}
+.footer {
+	font-family: Arial;
+	font-size: small;
+	text-align: center;
+	font-weight: normal;
+}
+a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a:active {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.transparenttable {
+
+}
+.line {
+	width: 75%;
+	border-color: #FFFFFF;
+	border-style: solid;
+	opacity: 0.6;
+}
