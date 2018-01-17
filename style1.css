@@ -26,18 +26,20 @@
 }
 
 .headertable {
-	border-style: solid;
-	border-color: #FFFFFF;
+	padding-left: 16px;
+	border-top-left-radius: 32px;
 	opacity: 0.8;
 }
 .logo {
 	border-width: 1px;
 }
 .headerlinks {
+	padding: 16px;
 	text-align: center;
 	font-size: 48px;
 	font-family: Arial;
 	font-weight: bolder;
+	
 }
 .maintext {
 	text-align: left;
@@ -45,10 +47,14 @@
 	font-family: Arial;
 	font-weight: normal;
 }
+.transparentbg {
+	background: rgba(0, 0, 0, 0.4);
+	border: 0px solid #fff;
+}
 .footer {
 	font-family: Arial;
 	font-size: small;
-	text-align: center;
+	text-align: right;
 	font-weight: normal;
 }
 a {
@@ -67,12 +73,40 @@ a:hover {
 	color: #FFFFFF;
 	text-decoration: none;
 }
-.transparenttable {
-
-}
 .line {
 	width: 75%;
 	border-color: #FFFFFF;
 	border-style: solid;
-	opacity: 0.6;
+	opacity: 0.8;
+}
+
+#reset-this-root {
+    all: initial;
+    * {
+        all: unset;
+    }
+}
+
+.blurin{
+	animation: blur .5s linear;
+	animation-delay: 0s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes blur{
+	0% {
+		filter: blur(20px);
+	}
+	10% {
+		filter: blur(15px);
+	}
+	30% {
+		filter: blur(10px);
+	}
+	50% {
+		filter: blur(5px);
+	}
+	100% {
+		filter: blur(0px);
+	}
 }

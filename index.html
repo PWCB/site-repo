@@ -2,9 +2,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-<!-- #BeginTemplate "master.dwt" -->
-
 <script src="scripts.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="loader.js"></script>
 
 <head runat="server">
 <title>PWCB</title>
@@ -16,117 +16,87 @@
 
 <link href="style1.css" media="screen" rel="stylesheet" title="CSS" type="text/css" >
 
-<!-- gallery -->
-<link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
-<link href='gallery/simplelightbox.min.css' rel='stylesheet' type='text/css'>
-<link href='gallery/gallery.css' rel='stylesheet' type='text/css'>
-
 
 <style type="text/css">
+.auto-style1 {
+	font-family: Arial;
+	font-size: small;
+	text-align: left;
+	font-weight: normal;
+	color: #CCCCCC;
+}
+
+.middle {
+  position: relative;
+  transform: translateY(50%);
+}
+
+.bg {
+	background-image: url(bg0.png);
+}
+
+}
+
 </style>
 </head>
 
-<body class="bodyx" onload="randombg()" id="random" style="width: 100%">
+<body class="blurin" onload="myFunction()" style="width: 100%; background-color: black; color: white;">
+
+
+<div id="preload">
+   <img src="bg0.png" width="1" height="1" alt="" />
+   <img src="bg1.png" width="1" height="1" alt="" />
+   <img src="bg2.png" width="1" height="1" alt="" />
+   <img src="bg3.png" width="1" height="1" alt="" />
+</div>
 
 <!-- Begin Container -->
+<span><p align="center">Loading...</p></span>
 
-<table cellpadding="75%" style="width: 100%" class="transparenttable" >
-	<tr class="maintable">
-		<td>
-			<table align="center" class="headertable" style="width: 75%" cellpadding="10%" cellspacing="10%">
-				<tr>
-					<td style="width: 475px; height: 475px;" class="logo">
-					<a href="index.html">
-					<img alt="Home" class="logo" height="475px" src="pwcbixlrgt.png" width="475px" ></a></td>
-					<td class="headerlinks"><strong> <a href="games.html">GAMES</a>
-					<a href="music.html">MUSIC</a>
-					<a href="artwork.html">ARTWORK</a> <a href="photos.html">
-					PHOTOS</a>
-					<a href="misc.html">MISC</a> <br>
-					<a href="https://twitter.com/pwcbrock">
-					<img alt="Twitter" height="32" src="twitter.png" width="32" class="logo"></a>
-					<a href="https://pwcb.itch.io/">
-					<img alt="Itch" height="32" src="itchio.png" width="32" class="logo"></a></strong></td>
-				</tr>
-			</table>
-			
-			<hr class="line" />
-			
-			<table align="center" style="width: 75%">
-			<!-- #BeginEditable "content" -->
-				<tr>
-					<td class="maintext">
-					&nbsp;
+<div class="middle">
+		<table style="width: 75%; height: 100%" align="center">
+			<tr>
+				<td>
+					<table align="center" class="headertable" style="width: 75%;" cellpadding="1%">
+						<tr>
+							<td style="height: 295px;" class="logo">
+							<a href="index.html">
+							<img alt="Home" class="logo" src="logoroundblu512.png" width="512px" height="252px" style="float: right" ></a></td>
+							<td class="headerlinks" style="height: 295px"><strong> <a href="games.html">GAMES</a>
+							<a href="music.html">MUSIC</a>
+							<a href="artwork.html">ARTWORK</a> <a href="photos.html">
+							PHOTOS</a>
+							<a href="misc.html">MISC</a> <br>
+							<a href="https://twitter.com/pwcbrock">
+							<img alt="Twitter" height="32" src="twitter.png" width="32" class="logo"></a>
+							<a href="https://pwcb.itch.io/">
+							<img alt="Itch" height="32" src="itchio.png" width="32" class="logo"></a></strong></td>
+						</tr>
+					</table>
+								
+					<table align="center" style="width: 75%">
+						<tr>
+							<td class="auto-style1" style="height: 16px">&nbsp;&nbsp;&nbsp;&nbsp; <a href="about.html">About</a> • 
+							© 2018 PWCB</td>
+						</tr>
+					</table>
+		
+					
 					</td>
-				</tr>
-			<!-- #EndEditable -->
-			</table>
-			
-			<hr class="line" />
-			
-			</td>
-	</tr>
-</table>
-<table style="width: 100%">
-	<tr>
-		<td class="footer" style="height: 16px">&nbsp;<a href="about.html">About</a> • 
-		© 2018 PWCB</td>
-	</tr>
-</table>
+					
+			</tr>
+		</table>
+</div>
 
-<!-- gallery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script type="text/javascript" src="gallery/simple-lightbox.js"></script>
-<script>
-	$(function(){
-		var $gallery = $('.gallery a').simpleLightbox();
+<script>	
+	//check if loaded
+	function myFunction() {
+	    alert("Image loaded: " + document.getElementById(bg0.png).complete);
+	}
 
-		$gallery.on('show.simplelightbox', function(){
-			console.log('Requested for showing');
-		})
-		.on('shown.simplelightbox', function(){
-			console.log('Shown');
-		})
-		.on('close.simplelightbox', function(){
-			console.log('Requested for closing');
-		})
-		.on('closed.simplelightbox', function(){
-			console.log('Closed');
-		})
-		.on('change.simplelightbox', function(){
-			console.log('Requested for change');
-		})
-		.on('next.simplelightbox', function(){
-			console.log('Requested for next');
-		})
-		.on('prev.simplelightbox', function(){
-			console.log('Requested for prev');
-		})
-		.on('nextImageLoaded.simplelightbox', function(){
-			console.log('Next image loaded');
-		})
-		.on('prevImageLoaded.simplelightbox', function(){
-			console.log('Prev image loaded');
-		})
-		.on('changed.simplelightbox', function(){
-			console.log('Image changed');
-		})
-		.on('nextDone.simplelightbox', function(){
-			console.log('Image changed to next');
-		})
-		.on('prevDone.simplelightbox', function(){
-			console.log('Image changed to prev');
-		})
-		.on('error.simplelightbox', function(e){
-			console.log('No image found, go to the next/prev');
-			console.log(e);
-		});
-	});
 </script>
 
 <!-- End Container -->
 </body>
-
-<!-- #EndTemplate -->
 
 </html>
